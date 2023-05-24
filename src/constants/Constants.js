@@ -1,3 +1,4 @@
+import {Dimensions} from 'react-native';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -6,11 +7,11 @@ import {
 export const SIZES = {
   wp: wp,
   hp: hp,
-  width: width,
-  height: height,
 };
 
-// commanSize
 export const SIZE = value => {
   return wp(value / 4.2);
 };
+
+export const deviceHeight = Dimensions.get('window').height;
+export const deviceWidth = Dimensions.get('window').width;
